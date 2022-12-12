@@ -1,3 +1,4 @@
+//Пакет для считывания ввода пользователя с клавиатуры
 package keyboard
 
 import (
@@ -7,6 +8,8 @@ import (
 	"strings"
 )
 
+//Считывает число с плавающей точкой с клавиатуры
+//Возвращает считываемое число или любую возникшую ошибку
 func GetFloat() (float64, error) {
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
